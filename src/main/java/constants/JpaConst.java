@@ -9,7 +9,7 @@ package constants;
 public interface JpaConst {
 
     //presistence-unit名
-    String PRESISTENCE_UNIT_NAME = "daily_report_system";
+    String PERSISTENCE_UNIT_NAME = "daily_report_system";
 
     //データ取得件数の最大値
     int ROW_PER_PAGE = 15; //1ページに表示するレコードの数
