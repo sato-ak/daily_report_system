@@ -7,6 +7,7 @@ import javax.persistence.Persistence;
 import constants.JpaConst;
 
 public class DBUtil {
+
     private static EntityManagerFactory emf;
 
     //EntityManagerインスタンスを生成
@@ -22,6 +23,4 @@ public class DBUtil {
 
         return emf;
     }
-
-
 }

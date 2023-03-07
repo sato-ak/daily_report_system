@@ -38,13 +38,13 @@ import lombok.Setter;
 
 @Getter //全てのクラスフィールドについてgetterを自動生成する(Lombok)
 @Setter //全てのクラスフィールドについてsetterを自動生成する(Lombok)
-@NoArgsConstructor //引数なしコンストラクタを自動生成する(Lombuk)
-@AllArgsConstructor //全てのクラスフィールドを引数に持つ引数ありコンストラクタを自動生成する(Lombuk)
+@NoArgsConstructor //引数なしコンストラクタを自動生成する(Lombok)
+@AllArgsConstructor //全てのクラスフィールドを引数に持つ引数ありコンストラクタを自動生成する(Lombok)
 @Entity
 public class Employee {
 
-    /**id
-     *
+    /**
+     *id
      */
     @Id
     @Column(name = JpaConst.EMP_COL_ID)
@@ -77,7 +77,7 @@ public class Employee {
     /**
      * 登録日時
      */
-    @Column(name = JpaConst.EMP_COL_UPDATED_AT, nullable = false)
+    @Column(name = JpaConst.EMP_COL_CREATED_AT, nullable = false)
     private LocalDateTime createdAt;
 
     /**

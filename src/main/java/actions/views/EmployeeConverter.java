@@ -15,7 +15,7 @@ public class EmployeeConverter {
 
     /**
      * ViewモデルのインスタンスからDTOモデルのインスタンスを作成する
-     * @param ev Ewのインスタンス
+     * @param ev EmployeeViewのインスタンス
      * @return Employeeのインスタンス
      */
     public static Employee toModel(EmployeeView ev) {
@@ -57,7 +57,7 @@ public class EmployeeConverter {
             e.getPassword(),
             e.getAdminFlag() == null
                 ? null
-                : e.getDeleteFlag() == JpaConst.ROLE_ADMIN
+                : e.getAdminFlag() == JpaConst.ROLE_ADMIN
                     ? AttributeConst.ROLE_ADMIN.getIntegerValue()
                     : AttributeConst.ROLE_GENERAL.getIntegerValue(),
             e.getCreatedAt(),
@@ -87,7 +87,7 @@ public class EmployeeConverter {
     /**
      * Viewモデルの全フィールドの内容をDTOモデルのフィールドにコピーする
      * @param e DTOモデル（コピー先）
-     * @param ev Viewモデル(コピー先)
+     * @param ev Viewモデル(コピー元)
      */
     public static void copyViewToModel(Employee e, EmployeeView ev) {
         e.setId(ev.getId());
@@ -98,5 +98,7 @@ public class EmployeeConverter {
         e.setCreatedAt(ev.getCreatedAt());
         e.setUpdatedAt(ev.getUpdatedAt());
         e.setDeleteFlag(ev.getDeleteFlag());
+
         }
+
 }

@@ -1,5 +1,6 @@
 package models.validators;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import actions.views.EmployeeView;
@@ -7,7 +8,7 @@ import constants.MessageConst;
 import services.EmployeeService;
 
 /**
- * 業員インスタンスに設定されている値のバリデーションを行うクラス
+ * 従業員インスタンスに設定されている値のバリデーションを行うクラス
  *
  */
 public class EmployeeValidator {
@@ -21,8 +22,8 @@ public class EmployeeValidator {
      * @return エラーのリスト
      */
     public static List<String> validate(
-            EmployeeService service, EmployeeView ev, Boolean codeDuplicateCheckFlag Boolean passwordCheckFlag) {
-        List<String> errors = new ArryList<String>();
+            EmployeeService service, EmployeeView ev, Boolean codeDuplicateCheckFlag, Boolean passwordCheckFlag) {
+        List<String> errors = new ArrayList<String>();
 
         //社員番号のチェック
         String codeError = validateCode(service, ev.getCode(), codeDuplicateCheckFlag);
@@ -31,9 +32,9 @@ public class EmployeeValidator {
         }
 
         //氏名のチェック
-        String nemeError = validateName(ev.getName());
+        String nameError = validateName(ev.getName());
         if (!nameError.equals("")) {
-            errors.add(nemeError);
+            errors.add(nameError);
         }
 
         //パスワードのチェック
@@ -62,7 +63,7 @@ public class EmployeeValidator {
         if (codeDuplicateCheckFlag) {
             //社員番号の重複チェックを実施
 
-            long employeeCount = isDuplicateEmployee(service, code);
+            long employeesCount = isDuplicateEmployee(service, code);
 
             //同一社員番号が既に登録されている場合はエラーメッセージを返却
             if (employeesCount > 0) {

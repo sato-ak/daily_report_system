@@ -60,7 +60,7 @@ public enum AttributeConst {
 
     private AttributeConst(final Integer i) {
         this.text = null;
-        this.i =i;
+        this.i = i;
     }
 
     public String getValue() {

@@ -73,6 +73,15 @@ public class EmployeeService extends ServiceBase {
      * @param id
      * @return 取得データのインスタンス
      */
+    public EmployeeView findOne(int id) {
+        Employee e = findOneInternal(id);
+        return EmployeeConverter.toView(e);
+    }
+    /**
+     * 社員番号を条件に該当するデータの件数を取得し、返却する
+     * @param code 社員番号
+     * @return 該当するデータの件数
+     */
     public long countByCode(String code) {
 
         //指定した社員番号を保持する従業員の件数を取得する
@@ -89,7 +98,6 @@ public class EmployeeService extends ServiceBase {
      * @return バリデーションや登録処理中に発生したエラーのリスト
      */
     public List<String> create(EmployeeView ev, String pepper) {
-    ev.setPassword(pass);
 
     //パスワードをハッシュ化して設定
     String pass = EncryptUtil.getPasswordEncrypt(ev.getPassword(), pepper);
@@ -125,7 +133,6 @@ public class EmployeeService extends ServiceBase {
 
         boolean validateCode = false;
         if (!savedEmp.getCode().equals(ev.getCode())) {
-
             //社員番号を更新する場合
 
             //社員番号についてのバリデーションを行う
@@ -142,8 +149,8 @@ public class EmployeeService extends ServiceBase {
             validatePass = true;
 
             //変更後のパスワードをハッシュ化し設定する
-            savedEmp.setPassword（
-                EncryptUtil.getPasswordEncrypt(ev.getPassword(), pepper);
+            savedEmp.setPassword(
+                EncryptUtil.getPasswordEncrypt(ev.getPassword(), pepper));
         }
 
         savedEmp.setName(ev.getName()); //変更後の氏名を設定する
@@ -172,7 +179,7 @@ public class EmployeeService extends ServiceBase {
     public void destroy(Integer id) {
 
         //idを条件に登録済みの従業員情報を取得する
-        EmployeeView saevdEmp = findOne(id);
+        EmployeeView savedEmp = findOne(id);
 
         //更新日時に現在時刻を設定する
         LocalDateTime today = LocalDateTime.now();
@@ -189,7 +196,7 @@ public class EmployeeService extends ServiceBase {
      * 社員番号とパスワードを条件に検索し、データが取得できるかどうかで認証結果を返却する
      * @param code 社員番号
      * @param plainPass パスワード
-     * param pepper pepper文字列
+     * @param pepper pepper文字列
      * @return 認証結果を返却する(成功：true 失敗：false)
      */
     public Boolean validateLogin(String code, String plainPass, String pepper) {
@@ -235,7 +242,6 @@ public class EmployeeService extends ServiceBase {
     /**
      * 従業員データを更新する
      * @param ev 画面から入力された従業員の登録内容
-     *
      */
 
     private void update(EmployeeView ev) {
