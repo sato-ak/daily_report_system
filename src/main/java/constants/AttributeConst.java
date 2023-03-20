@@ -48,7 +48,19 @@ public enum AttributeConst {
     REP_ID("id"),
     REP_DATE("report_date"),
     REP_TITLE("title"),
-    REP_CONTENT("content_msg");
+    REP_CONTENT("content_msg"),
+
+    // TOPページ
+    TOP_YEAR("year"),
+    TOP_MONTH("month"),
+    TOP_WEEKLIST("weekList"),
+    TOP_PREVIOUS_YEAR("previousYear"),
+    TOP_PREVIOUS_MONTH("previousMonth"),
+    TOP_NEXT_YEAR("nextYear"),
+    TOP_NEXT_MONTH("nextMonth"),
+    TOP_ACTION("action"),
+    TOP_COMMAND("command");
+
 
     private final String text;
     private final Integer i;
