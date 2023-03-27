@@ -1,7 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ page import="constants.ForwardConst" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ page import="constants.AttributeConst"%>
+<%@ page import="constants.ForwardConst"%>
 
 <c:set var="actTop" value="${ForwardConst.ACT_TOP.getValue()}" />
 <c:set var="actEmp" value="${ForwardConst.ACT_EMP.getValue()}" />
@@ -18,41 +20,189 @@
                 <c:out value="${flush}"></c:out>
             </div>
         </c:if>
-         <h2>日報管理システムへようこそ</h2>
-         <h3>【自分の日報  一覧】</h3>
-         <table id="report_list">
-            <tbody>
+        <div class="calendar-title">
+
+        <h2><c:out value="${sessionScope.login_employee.name}" />&nbsp;さんの日報</h2>
+            <h1>
+                <c:out value="${year}" />
+                /
+                <c:out value="${month}" />
+            </h1>
+        </div>
+
+        <div class="calendar-container">
+                    <div id="next-prev-button">
+                        <form method="GET" action="<c:url value=''/>">
+                            <input type="hidden"
+                                name="${AttributeConst.TOP_ACTION.getValue()}"
+                                value="<c:out value='${actTop}' />" />
+                            <input type="hidden"
+                                name="${AttributeConst.TOP_COMMAND.getValue()}"
+                                value="<c:out value='${commIdx}' />" />
+                            <input type="hidden" name="${AttributeConst.TOP_YEAR.getValue()}"
+                                value="<c:out value='${previousYear}' />" />
+                            <input type="hidden"
+                                name="${AttributeConst.TOP_MONTH.getValue()}"
+                                value="<c:out value='${previousMonth}' />" />
+                            <p><button type="submit" id="prev">‹</button>前月&nbsp;</p>
+                        </form>
+
+                        <form method="GET" action="<c:url value=''/>">
+                            <input type="hidden"
+                                name="${AttributeConst.TOP_ACTION.getValue()}"
+                                value="<c:out value='${actTop}' />" />
+                            <input type="hidden"
+                                name="${AttributeConst.TOP_COMMAND.getValue()}"
+                                value="<c:out value='${commIdx}' />" />
+                            <input type="hidden" name="${AttributeConst.TOP_YEAR.getValue()}"
+                                value="<c:out value='${nextYear}' />" />
+                            <input type="hidden"
+                                name="${AttributeConst.TOP_MONTH.getValue()}"
+                                value="<c:out value='${nextMonth}' />" />
+                            <p>翌月<button type="submit" id="next">›</button></p>
+                        </form>
+            </div>
+
+
+            <table class="calendar">
                 <tr>
-                    <th class="report_name">氏名</th>
-                    <th class="report_date">日付</th>
-                    <th class="report_title">タイトル</th>
-                    <th class="report_action">操作</th>
+                    <th>MON</th>
+                    <th>TUE</th>
+                    <th>WED</th>
+                    <th>THU</th>
+                    <th>FRI</th>
+                    <th class="weekend">SAT</th>
+                    <th class="weekend">SUN</th>
                 </tr>
-                <c:forEach var="report" items="${reports}" varStatus="status">
-                    <fmt:parseDate value="${report.reportDate}" pattern="yyyy-MM-dd" var="reportDay" type="date" />
-                    <tr class="row${status.count % 2}">
-                        <td class="report_name"><c:out value="${report.employee.name}" /></td>
-                        <td class="report_date"><fmt:formatDate value='${reportDay}' pattern='yyyy-MM-dd' /></td>
-                        <td class="report_title">${report.title}</td>
-                        <td class="report_action"><a href="<c:url value='?action=${actRep}&command=${commShow}&id=${report.id}' />">詳細を見る</a></td>
+
+                <c:forEach var="week" items="${weekList}">
+                    <tr class="day">
+                        <td>
+                            <c:choose>
+                                <c:when test="${week.monDateOfcurrentMonth == true}">
+                                    <span class="thisMonth"><c:out value="${week.monDate}" /></span>
+                                </c:when>
+                                <c:otherwise>
+                                    <span class="otherMonth"><c:out value="${week.monDate}" /></span>
+                                </c:otherwise>
+                            </c:choose>
+                            <br>
+                            <c:forEach var="receive" items="${week.monDateReport}">
+                            <br>
+                             <a
+                                    href="<c:url value='?action=${actRep}&command=${commShow}&id=${receive.id}' />">
+                                    <c:out value="${receive.title}" />
+                                </a>
+                            </c:forEach>
+                        </td>
+                        <td>
+                            <c:choose>
+                                <c:when test="${week.tueDateOfcurrentMonth == true}">
+                                    <span class="thisMonth"><c:out value="${week.tueDate}" /></span>
+                                </c:when>
+                                <c:otherwise>
+                                    <span class="otherMonth"><c:out value="${week.tueDate}" /></span>
+                                </c:otherwise>
+                            </c:choose>
+                            <c:forEach var="receive" items="${week.tueDateReport}">
+                                <br>
+                                <a
+                                    href="<c:url value='?action=${actRep}&command=${commShow}&id=${receive.id}' />">
+                                    <c:out value="${receive.title}" />
+                                </a>
+                            </c:forEach>
+                        </td>
+                        <td>
+                            <c:choose>
+                                <c:when test="${week.wedDateOfcurrentMonth == true}">
+                                    <span class="thisMonth"><c:out value="${week.wedDate}" /></span>
+                                </c:when>
+                                <c:otherwise>
+                                    <span class="otherMonth"><c:out value="${week.wedDate}" /></span>
+                                </c:otherwise>
+                            </c:choose>
+                           <c:forEach var="receive" items="${week.wedDateReport}">
+                                <br>
+                                <a
+                                    href="<c:url value='?action=${actRep}&command=${commShow}&id=${receive.id}' />">
+                                    <c:out value="${receive.title}" />
+                                </a>
+                            </c:forEach>
+                        </td>
+                        <td>
+                         <c:choose>
+                                <c:when test="${week.thuDateOfcurrentMonth == true}">
+                                    <span class="thisMonth"><c:out value="${week.thuDate}" /></span>
+                                </c:when>
+                                <c:otherwise>
+                                    <span class="otherMonth"><c:out value="${week.thuDate}" /></span>
+                                </c:otherwise>
+                            </c:choose>
+                            <c:forEach var="receive" items="${week.thuDateReport}">
+                                <br>
+                                <a
+                                    href="<c:url value='?action=${actRep}&command=${commShow}&id=${receive.id}' />">
+                                    <c:out value="${receive.title}" />
+                                </a>
+                            </c:forEach>
+                        </td>
+                        <td>
+                         <c:choose>
+                                <c:when test="${week.friDateOfcurrentMonth == true}">
+                                    <span class="thisMonth"><c:out value="${week.friDate}" /></span>
+                                </c:when>
+                                <c:otherwise>
+                                    <span class="otherMonth"><c:out value="${week.friDate}" /></span>
+                                </c:otherwise>
+                            </c:choose>
+                            <c:forEach var="receive" items="${week.friDateReport}">
+                                <br>
+                                <a
+                                    href="<c:url value='?action=${actRep}&command=${commShow}&id=${receive.id}' />">
+                                    <c:out value="${receive.title}" />
+                                </a>
+                            </c:forEach>
+                        </td>
+                        <td>
+                            <c:choose>
+                                <c:when test="${week.satDateOfcurrentMonth == true}">
+                                    <span class="thisMonth"><c:out value="${week.satDate}" /></span>
+                                </c:when>
+                                <c:otherwise>
+                                    <span class="otherMonth"><c:out value="${week.satDate}" /></span>
+                                </c:otherwise>
+                            </c:choose>
+                            <c:forEach var="receive" items="${week.satDateReport}">
+                                <br>
+                                <a
+                                    href="<c:url value='?action=${actRep}&command=${commShow}&id=${receive.id}' />">
+                                    <c:out value="${receive.title}" />
+                                </a>
+                            </c:forEach>
+                        </td>
+                        <td>
+                            <c:choose>
+                                <c:when test="${week.sunDateOfcurrentMonth == true}">
+                                    <span class="thisMonth"><c:out value="${week.sunDate}" /></span>
+                                </c:when>
+                                <c:otherwise>
+                                    <span class="otherMonth"><c:out value="${week.sunDate}" /></span>
+                                </c:otherwise>
+                            </c:choose>
+                            <c:forEach var="receive" items="${week.sunDateReport}">
+                                <br>
+                                <a
+                                    href="<c:url value='?action=${actRep}&command=${commShow}&id=${receive.id}' />">
+                                    <c:out value="${receive.title}" />
+                                </a>
+                            </c:forEach>
+                        </td>
                     </tr>
                 </c:forEach>
-            </tbody>
-         </table>
-
-         <div id="pagination">
-            (全 ${reports_count} 件) <br />
-            <c:forEach var="i" begin="1" end="${((reports_count - 1) / maxRow) + 1}" step="1">
-                <c:choose>
-                    <c:when test="${i == page}">
-                        <c:out value="${i}" />&nbsp;
-                    </c:when>
-                    <c:otherwise>
-                        <a href="<c:url value='?action=${actTop}&command=${commIdx}&page=${i}' />"><c:out value="${i}" /></a>&nbsp;
-                    </c:otherwise>
-                </c:choose>
-            </c:forEach>
+            </table>
         </div>
-        <p><a href="<c:url value='?action=${actRep}&command=${commNew}' />">新規日報の登録</a></p>
+        <p>
+            <a href="<c:url value='?action=${actRep}&command=${commNew}' />">新規日報の登録</a>
+        </p>
     </c:param>
 </c:import>

@@ -29,6 +29,7 @@
                         <a href="<c:url value='?action=${actEmp}&command=${commIdx}' />">従業員管理</a>&nbsp;
                     </c:if>
                         <a href="<c:url value='?action=${actRep}&command=${commIdx}' />">日報管理</a>&nbsp;
+                        <a href="<c:url value='?action=${actTop}&command=${commIdx}' />">自分の日報</a>
                 </c:if>
             </div>
             <c:if test="${sessionScope.login_employee != null}">

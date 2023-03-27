@@ -1,5 +1,6 @@
 package services;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -43,7 +44,6 @@ public class ReportService extends ServiceBase {
                 .setParameter(JpaConst.JPQL_PARM_EMPLOYEE, EmployeeConverter.toModel(employee))
                 .getSingleResult();
 
-
         return count;
     }
 
@@ -70,6 +70,7 @@ public class ReportService extends ServiceBase {
                 .getSingleResult();
         return reports_count;
     }
+
     /**
      * idを条件に取得したデータをReportViewのインスタンスで返却する
      * @param id
@@ -97,6 +98,7 @@ public class ReportService extends ServiceBase {
         return errors;
 
     }
+
     /**
      * 画面から入力された日報の登録内容を元に、日報データを更新する
      * @param rv 日報の更新内容
@@ -148,8 +150,25 @@ public class ReportService extends ServiceBase {
 
         em.getTransaction().begin();
         Report r = findOneInternal(rv.getId());
-        ReportConverter.copyViewToModel(r,  rv);
+        ReportConverter.copyViewToModel(r, rv);
         em.getTransaction().commit();
     }
 
+    /**
+     * 特定期間の日報をすべて取得する
+     * @param employee 従業員
+     * @param firstDate 開始日時
+     * @param lastDate 終了日時
+     * @return
+     */
+    public List<Report> getAll(EmployeeView employee, LocalDate firstDate, LocalDate lastDate) {
+
+        List<Report> report = em.createNamedQuery(JpaConst.Q_REP_GET_ALL_TREM, Report.class)
+                .setParameter(JpaConst.JPQL_PARM_EMPLOYEE, EmployeeConverter.toModel(employee))
+                .setParameter(JpaConst.JPQL_PARM_START_DATETIME, firstDate)
+                .setParameter(JpaConst.JPQL_PARM_END_DATETIME, lastDate)
+                .getResultList();
+
+        return report;
+    }
 }

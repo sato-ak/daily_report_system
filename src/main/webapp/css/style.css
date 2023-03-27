@@ -154,3 +154,63 @@ pre {
 h3 {
     font-size: larger;
 }
+div.calendar-container th, td {
+    text-align: center;
+    vertical-align : top;
+
+}
+div.calendar-container th {
+	background-color: #bde9ba;
+	font-weight:bold;
+	font-size:25px;
+	padding: 5px;
+}
+
+div.calendar-container th.weekend {
+	background-color: #c0c0c0;
+}
+
+.calendar-container td {
+	height: 80px;
+	padding: 10px;
+
+}
+
+
+.calendar-title h1, h2 {
+    display: inline-block;
+
+}
+
+.calendar-container form {
+    display: inline-block;
+}
+
+table.calendar a {
+	display: flex;
+	flex-flow: column;
+	align-items: left;
+	border: 5px solid black;
+	border-radius: 7px;
+    border-color: white;
+	background-color: #B3FFB3;
+    white-space:nowrap;
+    width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+tr.day span.thisMonth {
+	font-weight:bold;
+	font-size: 20px;
+	text-decoration:underline;
+}
+tr.day span.otherMonth {
+	font-weight:bold;
+	font-size: 20px;
+	color: #a9a9a9;
+}
+
+.calendar-title title {
+	display: inline-block;
+}
+
