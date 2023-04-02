@@ -10,7 +10,11 @@ You can manage an employee information.(administrator only)
 <h3>Login page</h1>
 
 ![Login page](/Login.png "login")
+
+<h3>Create a report page</h1>
 ![Create a report page](/Create.png "create")
+
+<h3>Top page</h1>
 ![Top page](/Toppage.png "toppage")
 
 # Features
