@@ -9,7 +9,7 @@ You can read all employees' daily report.<br>
 You can manage an employee information.(administrator only) 
 
 Login page
-./Toppage
+./Toppage.png
 
 Top page
 (https://gyazo.com/ece18d6a33fd250afe184274625454e7)
