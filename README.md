@@ -1,4 +1,3 @@
-＄ npm install hexo-filter-fix-cjk-spacing --save
 # daily_report_system
 # Name
  
