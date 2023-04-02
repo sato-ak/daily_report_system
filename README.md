@@ -9,7 +9,7 @@ You can read all employees' daily report.<br>
 You can manage an employee information.(administrator only) 
 
 ![Login page]
-(./Login.png)
+(/Login.png)
 https://github.com/sato-ak/daily_report_system/blob/main/Login.png
 
 Top page
