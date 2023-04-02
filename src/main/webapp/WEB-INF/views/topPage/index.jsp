@@ -22,7 +22,7 @@
         </c:if>
         <div class="calendar-title">
 
-        <h2><c:out value="${sessionScope.login_employee.name}" />&nbsp;さんの日報</h2>
+        <h2><span><c:out value="${sessionScope.login_employee.name}" /></span>&nbsp;さんの日報</h2>
             <h1>
                 <c:out value="${year}" />
                 /
@@ -71,8 +71,8 @@
                     <th>WED</th>
                     <th>THU</th>
                     <th>FRI</th>
-                    <th class="weekend">SAT</th>
-                    <th class="weekend">SUN</th>
+                    <th class="sat">SAT</th>
+                    <th class="sun">SUN</th>
                 </tr>
 
                 <c:forEach var="week" items="${weekList}">
@@ -86,12 +86,11 @@
                                     <span class="otherMonth"><c:out value="${week.monDate}" /></span>
                                 </c:otherwise>
                             </c:choose>
-                            <br>
                             <c:forEach var="receive" items="${week.monDateReport}">
-                            <br>
+
                              <a
                                     href="<c:url value='?action=${actRep}&command=${commShow}&id=${receive.id}' />">
-                                    <c:out value="${receive.title}" />
+                                    <span><c:out value="${receive.title}" /></span>
                                 </a>
                             </c:forEach>
                         </td>
@@ -105,10 +104,10 @@
                                 </c:otherwise>
                             </c:choose>
                             <c:forEach var="receive" items="${week.tueDateReport}">
-                                <br>
+
                                 <a
                                     href="<c:url value='?action=${actRep}&command=${commShow}&id=${receive.id}' />">
-                                    <c:out value="${receive.title}" />
+                                    <span><c:out value="${receive.title}" /></span>
                                 </a>
                             </c:forEach>
                         </td>
@@ -122,10 +121,9 @@
                                 </c:otherwise>
                             </c:choose>
                            <c:forEach var="receive" items="${week.wedDateReport}">
-                                <br>
                                 <a
                                     href="<c:url value='?action=${actRep}&command=${commShow}&id=${receive.id}' />">
-                                    <c:out value="${receive.title}" />
+                                    <span><c:out value="${receive.title}" /></span>
                                 </a>
                             </c:forEach>
                         </td>
@@ -139,10 +137,9 @@
                                 </c:otherwise>
                             </c:choose>
                             <c:forEach var="receive" items="${week.thuDateReport}">
-                                <br>
                                 <a
                                     href="<c:url value='?action=${actRep}&command=${commShow}&id=${receive.id}' />">
-                                    <c:out value="${receive.title}" />
+                                    <span><c:out value="${receive.title}" /></span>
                                 </a>
                             </c:forEach>
                         </td>
@@ -156,44 +153,41 @@
                                 </c:otherwise>
                             </c:choose>
                             <c:forEach var="receive" items="${week.friDateReport}">
-                                <br>
                                 <a
                                     href="<c:url value='?action=${actRep}&command=${commShow}&id=${receive.id}' />">
-                                    <c:out value="${receive.title}" />
+                                    <span><c:out value="${receive.title}" /></span>
                                 </a>
                             </c:forEach>
                         </td>
                         <td>
                             <c:choose>
                                 <c:when test="${week.satDateOfcurrentMonth == true}">
-                                    <span class="thisMonth"><c:out value="${week.satDate}" /></span>
+                                    <span class="satThisMonth"><c:out value="${week.satDate}" /></span></span>
                                 </c:when>
                                 <c:otherwise>
-                                    <span class="otherMonth"><c:out value="${week.satDate}" /></span>
+                                    <span class="satOtherMonth"><c:out value="${week.satDate}" /></span></span>
                                 </c:otherwise>
                             </c:choose>
                             <c:forEach var="receive" items="${week.satDateReport}">
-                                <br>
                                 <a
                                     href="<c:url value='?action=${actRep}&command=${commShow}&id=${receive.id}' />">
-                                    <c:out value="${receive.title}" />
+                                    <span><c:out value="${receive.title}" /></span>
                                 </a>
                             </c:forEach>
                         </td>
                         <td>
                             <c:choose>
                                 <c:when test="${week.sunDateOfcurrentMonth == true}">
-                                    <span class="thisMonth"><c:out value="${week.sunDate}" /></span>
+                                    <span class="sunThisMonth"><c:out value="${week.sunDate}" /></span>
                                 </c:when>
                                 <c:otherwise>
-                                    <span class="otherMonth"><c:out value="${week.sunDate}" /></span>
+                                    <span class="sunOtherMonth"><c:out value="${week.sunDate}" /></span>
                                 </c:otherwise>
                             </c:choose>
                             <c:forEach var="receive" items="${week.sunDateReport}">
-                                <br>
                                 <a
                                     href="<c:url value='?action=${actRep}&command=${commShow}&id=${receive.id}' />">
-                                    <c:out value="${receive.title}" />
+                                    <span><c:out value="${receive.title}" /></span>
                                 </a>
                             </c:forEach>
                         </td>
