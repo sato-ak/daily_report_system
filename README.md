@@ -10,6 +10,7 @@ You can manage an employee information.(administrator only)
 
 ![Login page]
 (/Login.png)
+![画像の説明](/Login.png "login")
 https://github.com/sato-ak/daily_report_system/blob/main/Login.png
 
 Top page
