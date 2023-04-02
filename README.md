@@ -10,6 +10,7 @@ You can manage an employee information.(administrator only)
 
 ![Login page]
 (./Login.png)
+https://github.com/sato-ak/daily_report_system/blob/main/Login.png
 
 Top page
 (https://gyazo.com/ece18d6a33fd250afe184274625454e7)
