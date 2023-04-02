@@ -24,7 +24,6 @@ Click report title on a calender and you'll jump to the detail page.
  
 # Requirement
 
-
 # Installation
 
 # Usage
