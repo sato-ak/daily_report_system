@@ -11,7 +11,6 @@
 ### Login page
 
 ![Login page](/Login.png "login")
-
 ### Create a report page
 
 ![Create a report page](/Create.png "create")
