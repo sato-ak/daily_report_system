@@ -1,5 +1,5 @@
 # daily_report_system
-# Name（リポジトリ/プロジェクト/OSSなどの名前）
+# Name
  
 ”daily_report_system" is a program for managing daily reports with Java.
 
@@ -8,55 +8,30 @@ You can write and read your daily report.
 You can read other employees' daily report.
 You can manage an employee information.(administrator only) 
 
-login page
+Login page
 https://gyazo.com/b737d79e33cf997e018cc263b3722c49
+
+Top page
+https://gyazo.com/ece18d6a33fd250afe184274625454e7
+
+Create a report page
+https://gyazo.com/0d41fa7ade7dcba3d8c8c73ba51e983b
  
 # Features
-You can  carender. 
-
+Your reports are listed on a calender. 
+Click report title and you'll jump to the detail page.
  
 # Requirement
- 
-"hoge"を動かすのに必要なライブラリなどを列挙する
- 
-* huga 3.5.2
-* hogehuga 1.0.2
- 
+
+
 # Installation
- 
-Requirementで列挙したライブラリなどのインストール方法を説明する
- 
-```bash
-pip install huga_package
-```
- 
+
 # Usage
- 
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
- 
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
- 
+
 # Note
- 
-注意点などがあれば書く
- 
+
 # Author
- 
-作成情報を列挙する
- 
-* 作成者
-* 所属
-* E-mail
- 
+
+S.Akiyama
+
 # License
-ライセンスを明示する
- 
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
- 
-社内向けなら社外秘であることを明示してる
- 
-"hoge" is Confidential.
