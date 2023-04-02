@@ -16,6 +16,7 @@ You can manage an employee information.(administrator only)
 ![Create a report page](/Create.png "create")
 
 <h3>Top page</h3>
+
 ![Top page](/Toppage.png "toppage")
 
 # Features
