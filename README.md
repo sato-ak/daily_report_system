@@ -21,7 +21,7 @@ Your reports are listed on a calender. <br>
 Click report title on a calender and you'll jump to the detail page.
 
 ![ToppageToDetail](ToppageToDetail.gif)
- 
+<img src="ToppageToDetail.gif" width="60%">
 # Requirement
 
 # Installation
