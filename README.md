@@ -10,6 +10,8 @@
 ### Login page
 
 ![Login page](/Login.png "login")
+<img src="Login.png" width="50%">
+
 ### Create a report page
 
 ![Create a report page](/Create.png "create")
