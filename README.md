@@ -9,14 +9,9 @@ You can read all employees' daily report.<br>
 You can manage an employee information.(administrator only) 
 
 ![Login page](/Login.png "login")
+![Create a report page](/Create.png "create")
+![Top page](/Toppage.png "toppage")
 
-
-Top page
-(https://gyazo.com/ece18d6a33fd250afe184274625454e7)
-
-Create a report page
-(https://gyazo.com/0d41fa7ade7dcba3d8c8c73ba51e983b)
- 
 # Features
 Your reports are listed on a calender. <br>
 Click report title and you'll jump to the detail page.
