@@ -11,12 +11,10 @@
 <img src="Login.png" width="30%">
 
 ### Create a report page
-
-![Create a report page](/Create.png "create")
+<img src="Create.png" width="30%">
 
 ### Top page
-
-![Top page](/Toppage.png "toppage")
+<img src="Create.png" width="30%">
 
 # Features
 Your reports are listed on a calender. <br>
