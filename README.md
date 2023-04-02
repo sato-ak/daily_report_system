@@ -4,14 +4,14 @@
 ”daily_report_system" is a program for managing daily reports with Java.
 
 # DEMO
-You can write your daily report.<br>
+* You can write your daily report.<br>
 You can read all employees' daily report.<br>
 You can manage an employee information.(administrator only) 
 <h3>Login page</h3>
 
 ![Login page](/Login.png "login")
 
-<h3>Create a report page</h3>
+### Create a report page<
 
 ![Create a report page](/Create.png "create")
 
