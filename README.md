@@ -8,10 +8,8 @@ You can write your daily report.<br>
 You can read all employees' daily report.<br>
 You can manage an employee information.(administrator only) 
 
-![Login page]
-(/Login.png)
-![画像の説明](/Login.png "login")
-https://github.com/sato-ak/daily_report_system/blob/main/Login.png
+![Login page](/Login.png "login")
+
 
 Top page
 (https://gyazo.com/ece18d6a33fd250afe184274625454e7)
