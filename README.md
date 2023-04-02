@@ -5,17 +5,17 @@
 
 # DEMO
 * You can write your daily report.<br>
-You can read all employees' daily report.<br>
-You can manage an employee information.(administrator only) 
-<h3>Login page</h3>
+* You can read all employees' daily report.<br>
+* You can manage an employee information.(administrator only) 
+### Login page
 
 ![Login page](/Login.png "login")
 
-### Create a report page<
+### Create a report page
 
 ![Create a report page](/Create.png "create")
 
-<h3>Top page</h3>
+###Top page
 
 ![Top page](/Toppage.png "toppage")
 
