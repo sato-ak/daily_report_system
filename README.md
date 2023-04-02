@@ -8,8 +8,6 @@
 * You can read all employees' daily report.<br>
 * You can manage an employee information.(administrator only) 
 ### Login page
-
-![Login page]
 <img src="Login.png" width="30%">
 
 ### Create a report page
