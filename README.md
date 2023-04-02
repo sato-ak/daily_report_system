@@ -4,18 +4,18 @@
 ”daily_report_system" is a program for managing daily reports with Java.
 
 # DEMO
-You can write and read your daily report.
-You can read other employees' daily report.
+You can write and read your daily report.<br>
+You can read other employees' daily report.<br>
 You can manage an employee information.(administrator only) 
 
 Login page
-https://gyazo.com/b737d79e33cf997e018cc263b3722c49
+(https://gyazo.com/b737d79e33cf997e018cc263b3722c49)
 
 Top page
-https://gyazo.com/ece18d6a33fd250afe184274625454e7
+(https://gyazo.com/ece18d6a33fd250afe184274625454e7)
 
 Create a report page
-https://gyazo.com/0d41fa7ade7dcba3d8c8c73ba51e983b
+(https://gyazo.com/0d41fa7ade7dcba3d8c8c73ba51e983b)
  
 # Features
 Your reports are listed on a calender. 
