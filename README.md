@@ -9,7 +9,7 @@
 * You can manage an employee information.(administrator only) 
 ### Login page
 
-![Login page](/Login.png "login")
+![Login page]
 <img src="Login.png" width="30%">
 
 ### Create a report page
