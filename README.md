@@ -20,8 +20,8 @@
 ![Top page](/Toppage.png "toppage")
 
 # Features
-* Your reports are listed on a calender. <br>
-Click report title and you'll jump to the detail page.
+Your reports are listed on a calender. <br>
+Click report title on a calender and you'll jump to the detail page.
  
 # Requirement
 
