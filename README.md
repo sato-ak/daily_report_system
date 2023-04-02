@@ -20,6 +20,7 @@
 Your reports are listed on a calender. <br>
 You can easily access to the detail page by clicking the title on a calender.
 Click report title on a calender and you'll jump to the detail page.
+[![ToppageToDetail](ToppageToDetail.gif)]
  
 # Requirement
 
