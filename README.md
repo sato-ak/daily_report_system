@@ -7,14 +7,15 @@
 You can write your daily report.<br>
 You can read all employees' daily report.<br>
 You can manage an employee information.(administrator only) 
-<h3>Login page</h1>
+<h3>Login page</h3>
 
 ![Login page](/Login.png "login")
 
-<h3>Create a report page</h1>
+<h3>Create a report page</h3>
+
 ![Create a report page](/Create.png "create")
 
-<h3>Top page</h1>
+<h3>Top page</h3>
 ![Top page](/Toppage.png "toppage")
 
 # Features
