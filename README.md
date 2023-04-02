@@ -18,7 +18,7 @@ Create a report page
 (https://gyazo.com/0d41fa7ade7dcba3d8c8c73ba51e983b)
  
 # Features
-Your reports are listed on a calender. 
+Your reports are listed on a calender. <br>
 Click report title and you'll jump to the detail page.
  
 # Requirement
