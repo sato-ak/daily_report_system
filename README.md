@@ -7,14 +7,13 @@
 * You can write your daily report.<br>
 * You can read all employees' daily report.<br>
 * You can manage an employee information.(administrator only) 
-### Login page
-<img src="Login.png" width="30%">
+
+### Top page
+<img src="Toppage.png" width="60%">
 
 ### Create a report page
 <img src="Create.png" width="30%">
 
-### Top page
-<img src="Toppage.png" width="60%">
 
 # Features
 Your reports are listed on a calender. <br>
