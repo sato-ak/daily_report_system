@@ -22,10 +22,12 @@ Click report title on a calender and you'll jump to the detail page.
 <img src="ToppageToDetail.gif" width="60%">
 
 # Requirement
+Tomcat9 (Java11)
 
 # Installation
 
 # Usage
+
 
 # Note
 
