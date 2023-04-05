@@ -22,7 +22,18 @@ Click report title on a calender and you'll jump to the detail page.
 <img src="ToppageToDetail.gif" width="60%">
 
 # Requirement
-Tomcat9 (Java11)
+Java11
+Tomcat9
+pom.xml
+java.servlet-api:4.0.1[provided]
+mysql-connector-java:8.0.23
+hibernate-core:5.4.28.Final
+lombok:1.18.16[provided]
+taglibs-standard-impl:1.2.5
+javax.servlet.jsp.jstl-api:1.2.1
+
+MySQL
+
 
 # Installation
 
