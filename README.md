@@ -25,6 +25,7 @@ Click report title on a calender and you'll jump to the detail page.
 
 * Java11
 * Tomcat9
+* MySQL
 * pom.xml
 
 |  library          |        version       |
@@ -36,7 +37,7 @@ Click report title on a calender and you'll jump to the detail page.
 |taglibs-standard-impl:|1.2.5|
 |javax.servlet.jsp.jstl-api:|1.2.1|
 
-* MySQL
+
 
 
 # Installation
