@@ -22,9 +22,10 @@ Click report title on a calender and you'll jump to the detail page.
 <img src="ToppageToDetail.gif" width="60%">
 
 # Requirement
-#Java11
-#Tomcat9
-#pom.xml
+
+*Java11
+*Tomcat9
+*pom.xml
 |                 |        version       |
 |-----------------|---------------|
 |java.servlet-api:|4.0.1[provided]|
