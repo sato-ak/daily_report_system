@@ -23,10 +23,10 @@ Click report title on a calender and you'll jump to the detail page.
 
 # Requirement
 
-*Java11
-*Tomcat9
-*pom.xml
-|                 |        version       |
+* Java11
+* Tomcat9
+* pom.xml
+|  library          |        version       |
 |-----------------|---------------|
 |java.servlet-api:|4.0.1[provided]|
 |mysql-connector-java:|8.0.23|
@@ -35,7 +35,7 @@ Click report title on a calender and you'll jump to the detail page.
 |taglibs-standard-impl:|1.2.5|
 |javax.servlet.jsp.jstl-api:|1.2.1|
 
-#MySQL
+* MySQL
 
 
 # Installation
