@@ -41,10 +41,11 @@ Click report title on a calender and you'll jump to the detail page.
 
 
 # Installation
-$ git clone https://github.com/sato-ak/daily_report_system.git
+git clone https://github.com/sato-ak/daily_report_system.git
 
 # Usage
 
+http://localhost:8080/daily_report_system/?action=Auth&command=showLogin
 
 # Note
 
@@ -53,3 +54,4 @@ $ git clone https://github.com/sato-ak/daily_report_system.git
 S.Akiyama
 
 # License
+”daily_report_system" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
