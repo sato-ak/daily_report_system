@@ -49,8 +49,6 @@ Access to the login page and input your name and password to start.
 Login page
 http://localhost:8080/daily_report_system/?action=Auth&command=showLogin
 
-# Note
-
 # Author
 
 S.Akiyama
