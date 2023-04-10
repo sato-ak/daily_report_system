@@ -30,10 +30,10 @@ Click report title on a calender and you'll jump to the detail page.
 
 |  library          |        version       |
 |-----------------|---------------|
-|java.servlet-api|4.0.1[provided]|
+|java.servlet-api|4.0.1|
 |mysql-connector-java|8.0.23|
 |hibernate-core|5.4.28.Final|
-|lombok|1.18.16[provided]|
+|lombok|1.18.16|
 |taglibs-standard-impl|1.2.5|
 |javax.servlet.jsp.jstl-api|1.2.1|
 
@@ -41,7 +41,9 @@ Click report title on a calender and you'll jump to the detail page.
 
 
 # Installation
+…
 git clone https://github.com/sato-ak/daily_report_system.git
+…
 
 # Usage
 Access to the login page and input your name and password to start.
