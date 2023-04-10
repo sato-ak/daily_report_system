@@ -41,9 +41,9 @@ Click report title on a calender and you'll jump to the detail page.
 
 
 # Installation
----
+```
 git clone https://github.com/sato-ak/daily_report_system.git
----
+```
 
 # Usage
 Access to the login page and input your name and password to start.
