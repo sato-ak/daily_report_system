@@ -42,7 +42,7 @@ Click report title on a calender and you'll jump to the detail page.
 
 # Installation
 ```
-git clone https://github.com/sato-ak/daily_report_system.git
+$ git clone https://github.com/sato-ak/daily_report_system.git
 ```
 
 # Usage
